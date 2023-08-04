@@ -19,7 +19,7 @@ function Header ({ classes, paths }) {
             </Match>
           )
         }
-        { loggedIn &&
+        {loggedIn &&
           <li>
             <LogoutButton class={classes.link} />
           </li>
@@ -43,7 +43,11 @@ export default withStyles({
   list: {
     borderBottomColor: '#333 !important',
     '& li.selected a': {
-      color: 'rgb(240,61,77) !important'
+      color: 'rgb(255,97,0) !important',
+      borderBottomColor: 'rgb(255,97,0) !important'
+    },
+    '& li a:hover': {
+      borderBottomColor: 'rgba(255,138,0,.6)'
     }
   }
 }, Header)
