@@ -35,9 +35,9 @@ const Verify = () => {
   }
   return (
     <Fragment>
-      <div class='row u-center'>
+      {!authToken && <div class='row u-center'>
         <button class='btn-info' onClick={handleVerifyClick}>Verify</button>
-      </div>
+      </div>}
       {authToken && <PendingToken authToken={authToken} />}
     </Fragment>
   )
